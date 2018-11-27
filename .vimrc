@@ -1,4 +1,5 @@
 scriptencoding utf-8
+set title
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,sjis,utf-16le,utf-16,euc-jp
@@ -14,8 +15,8 @@ set wildmenu
 set ambiwidth=double
 
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set shiftround
 
 set backspace=indent,eol,start
@@ -25,3 +26,4 @@ inoremap ( ()<LEFT>
 inoremap () ()
 
 color pablo
+
