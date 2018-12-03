@@ -1,0 +1,56 @@
+#!/bin/bash
+
+export DOW="$HOME/Downloads"
+export DOC="$HOME/Documents"
+export OPT="$HOME/opt"
+
+#history command
+export HISTTIMEFORMAT='%Y-%m-%d_%T '
+
+
+eval "$(rbenv init -)"
+
+# man color
+man() {
+    env LESS_TERMCAP_mb=$'\E[01;31m' \
+    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+    LESS_TERMCAP_me=$'\E[0m' \
+    LESS_TERMCAP_se=$'\E[0m' \
+    LESS_TERMCAP_so=$'\E[38;5;246m' \
+    LESS_TERMCAP_ue=$'\E[0m' \
+    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+    man "$@"
+}
+
+# alias
+#general alias
+alias la='ls -ahlt -F --color=auto'
+alias ls='ls --color=auto'
+alias lh='ls -t | head'
+alias ps='ps --sort=start_time'
+alias df='df -h'
+alias grep='grep --color'
+alias home='cd ~'
+alias less='less -iMSNR'
+alias vi='vim'
+alias vimrc='vim ~/manitats/.vimrc'
+alias cd-="cd -"
+alias bk='cd ../'
+alias 2bk='cd ../../'
+alias 3bk='cd ../../../'
+alias 4bk='cd ../../../../'
+alias rc="vim ~/.bashrc"
+alias src="source ~/.bashrc"
+alias chrome='google-chrome'
+alias doc='cd ~/Documents'
+alias desk='cd ~/Desktop'
+alias dow='cd ~/Downloads'
+alias tocat='cd $CATALINA_HOME'
+alias tostart='$CATALINA_HOME/bin/startup.sh'
+alias toend='$CATALINA_HOME/bin/shutdown.sh'
+alias calc='soffice --calc'
+alias mozc='/usr/lib/mozc/mozc_tool --mode=config_dialog'
+alias dstat="dstat -tclnmrp"
+alias jfrcheck="jcmd $(pgrep -f Boot) JFR.check"
+alias sysplus="sqlplus / as sysdba"
+alias sqlplus="rlwrap -i -pBlue  sqlplus"
